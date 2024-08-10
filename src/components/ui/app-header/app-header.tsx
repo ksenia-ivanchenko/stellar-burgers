@@ -32,7 +32,5 @@ export const AppHeaderUI: FC<TAppHeaderUIProps> = ({ userName }) => (
         </p>
       </div>
     </nav>
-
-    <Outlet />
   </header>
 );
