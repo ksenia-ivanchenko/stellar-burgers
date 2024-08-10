@@ -8,12 +8,8 @@ export const BurgerConstructor: FC = () => {
   const burgerConstructor = useSelector((state) => state.burgerConstructor);
 
   const constructorItems = {
-    bun: burgerConstructor.ingredients
-      .filter((item) => item.type === 'bun')
-      .pop(),
-    ingredients: burgerConstructor.ingredients.filter(
-      (item) => item.type !== 'bun'
-    )
+    bun: burgerConstructor.bun,
+    ingredients: burgerConstructor.ingredients
   };
 
   const orderRequest = false;
