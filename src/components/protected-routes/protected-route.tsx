@@ -10,9 +10,9 @@ type ProtectedRouteProps = {
 };
 
 export const ProtectedRoute = ({ children, type }: ProtectedRouteProps) => {
-  const { user, isAuthChecked } = useSelector((state) => state.user);
+  const { user, isAuthChecked, loading } = useSelector((state) => state.user);
 
-  if (!isAuthChecked) {
+  if (!isAuthChecked || loading) {
     return <Preloader />;
   }
 

@@ -2,7 +2,7 @@ import { FC, SyntheticEvent, useState } from 'react';
 import { RegisterUI } from '@ui-pages';
 import { useDispatch, useSelector } from '../../services/store';
 import { useNavigate } from 'react-router-dom';
-import { registerUser } from '../../slices/userSlice';
+import { registerUser } from '../../slices/userSlice/authThunks';
 import { Preloader } from '@ui';
 
 export const Register: FC = () => {
@@ -11,7 +11,7 @@ export const Register: FC = () => {
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { error, loading } = useSelector((state) => state.user);
+  const { error } = useSelector((state) => state.user);
 
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
@@ -30,10 +30,6 @@ export const Register: FC = () => {
       }
     });
   };
-
-  if (loading) {
-    return <Preloader />;
-  }
 
   return (
     <RegisterUI

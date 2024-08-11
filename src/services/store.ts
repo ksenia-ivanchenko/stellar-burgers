@@ -8,7 +8,7 @@ import {
 } from 'react-redux';
 import { burgerConstructorReducer } from '../slices/burgerConstructorSlice';
 import { feedReducer } from '../slices/feedSlice';
-import { userReducer } from '../slices/userSlice';
+import { userReducer } from '../slices/userSlice/userSlice';
 
 const rootReducer = combineReducers({
   ingredients: ingredientsReducer,

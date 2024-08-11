@@ -1,11 +1,11 @@
 import { ProfileUI } from '@ui-pages';
 import { FC, SyntheticEvent, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from '../../services/store';
-import { updateUser } from '../../slices/userSlice';
+import { updateUser } from '../../slices/userSlice/authThunks';
 import { Preloader } from '@ui';
 
 export const Profile: FC = () => {
-  const { user, loading } = useSelector((state) => state.user);
+  const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   if (user) {
@@ -48,10 +48,6 @@ export const Profile: FC = () => {
         [e.target.name]: e.target.value
       }));
     };
-
-    if (loading) {
-      return <Preloader />;
-    }
 
     return (
       <ProfileUI

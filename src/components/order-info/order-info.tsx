@@ -6,12 +6,11 @@ import { useSelector } from '../../services/store';
 import { useParams } from 'react-router-dom';
 
 export const OrderInfo: FC = () => {
-  /** TODO: взять переменные orderData и ingredients из стора */
-  const number = useParams().number?.toString();
   const { orders } = useSelector((state) => state.feed.feedData);
+  const { ingredients } = useSelector((state) => state.ingredients);
+  const number = useParams().number?.toString();
   const orderData = orders.find((item) => item.number.toString() === number);
 
-  const { ingredients } = useSelector((state) => state.ingredients);
   /* Готовим данные для отображения */
   const orderInfo = useMemo(() => {
     if (!orderData || !ingredients.length) return null;
