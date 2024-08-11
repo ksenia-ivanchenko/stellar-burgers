@@ -1,4 +1,4 @@
-import { Navigate, useLocation } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from '../../services/store';
 import { Preloader } from '../ui/preloader';
 
@@ -21,7 +21,7 @@ export const ProtectedRoute = ({ children, type }: ProtectedRouteProps) => {
   }
 
   if (type === 'unauth' && user) {
-    return <Navigate to='/profile' />;
+    return <Navigate to='/profile' replace />;
   }
 
   return children;

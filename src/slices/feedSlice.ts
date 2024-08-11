@@ -1,6 +1,6 @@
-import { getFeedsApi } from '@api';
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { TOrdersData } from '@utils-types';
+import { getFeedsApi, orderBurgerApi } from '@api';
+import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { TOrder, TOrdersData } from '@utils-types';
 
 export const getFeed = createAsyncThunk<TOrdersData>(
   'feed/getAll',
@@ -26,9 +26,10 @@ const initialState: TFeedState = {
 export const feedSlice = createSlice({
   name: 'feed',
   initialState,
-  reducers: {},
-  selectors: {
-    getFeedSelector: (state) => state
+  reducers: {
+    addNewOrder: (state, action: PayloadAction<TOrder>) => {
+      state.feedData.orders.push(action.payload);
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -46,6 +47,5 @@ export const feedSlice = createSlice({
       });
   }
 });
-
-// export const { getIngredientsSelector } = ingredientsSlice.selectors;
+export const { addNewOrder } = feedSlice.actions;
 export const feedReducer = feedSlice.reducer;

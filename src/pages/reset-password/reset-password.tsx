@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { ResetPasswordUI } from '@ui-pages';
 import { useDispatch, useSelector } from '../../services/store';
-import { resetPassword } from '../../slices/userSlice/authThunks';
+import { resetPassword } from '../../slices/userSlice';
 
 export const ResetPassword: FC = () => {
   const navigate = useNavigate();

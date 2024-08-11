@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { ForgotPasswordUI } from '@ui-pages';
 import { useDispatch, useSelector } from '../../services/store';
-import { forgotPassword } from '../../slices/userSlice/authThunks';
+import { forgotPassword } from '../../slices/userSlice';
 
 export const ForgotPassword: FC = () => {
   const [email, setEmail] = useState('');
