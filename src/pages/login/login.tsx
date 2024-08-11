@@ -3,13 +3,14 @@ import { LoginUI } from '@ui-pages';
 import { useDispatch, useSelector } from '../../services/store';
 import { loginUser } from '../../slices/userSlice';
 import { useNavigate } from 'react-router-dom';
+import { Preloader } from '@ui';
 
 export const Login: FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { error } = useSelector((state) => state.user);
+  const { error, loading } = useSelector((state) => state.user);
 
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
@@ -26,6 +27,10 @@ export const Login: FC = () => {
       }
     });
   };
+
+  if (loading) {
+    return <Preloader />;
+  }
 
   return (
     <LoginUI

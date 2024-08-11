@@ -19,6 +19,7 @@ import { useEffect } from 'react';
 import { getIngredients } from '../../slices/ingredientsSlice';
 import { getFeed } from '../../slices/feedSlice';
 import { ProtectedRoute } from '../protected-routes/protected-route';
+import { checkUserAuth } from '../../slices/userSlice';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ const App = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    dispatch(checkUserAuth());
     dispatch(getIngredients());
     dispatch(getFeed());
   }, []);
