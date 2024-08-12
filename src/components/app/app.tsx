@@ -17,9 +17,9 @@ import { AppHeader, IngredientDetails, Modal, OrderInfo } from '@components';
 import { useDispatch } from '../../services/store';
 import { useEffect } from 'react';
 import { getIngredients } from '../../slices/ingredientsSlice';
-import { getFeed } from '../../slices/feedSlice';
 import { ProtectedRoute } from '../protected-routes/protected-route';
 import { checkUserAuth } from '../../slices/userSlice';
+import { clearOrderModalData } from '../../slices/orderSlice';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -30,7 +30,6 @@ const App = () => {
   useEffect(() => {
     dispatch(checkUserAuth());
     dispatch(getIngredients());
-    dispatch(getFeed());
   }, []);
 
   return (
