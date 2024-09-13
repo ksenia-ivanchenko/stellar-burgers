@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1726220054821" clover="3.2.0">
-  <project timestamp="1726220054821" name="All files">
-    <metrics statements="824" coveredstatements="540" conditionals="27" coveredconditionals="27" methods="36" coveredmethods="11" elements="887" coveredelements="578" complexity="0" loc="824" ncloc="824" packages="3" files="9" classes="9"/>
+<coverage generated="1726220507662" clover="3.2.0">
+  <project timestamp="1726220507663" name="All files">
+    <metrics statements="824" coveredstatements="546" conditionals="30" coveredconditionals="30" methods="36" coveredmethods="11" elements="890" coveredelements="587" complexity="0" loc="824" ncloc="824" packages="3" files="9" classes="9"/>
     <package name="services">
       <metrics statements="36" coveredstatements="36" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="store.ts" path="/Users/kseniaivancenko/Desktop/Dev/practicum/react/stellar-burgers/src/services/store.ts">
@@ -45,7 +45,7 @@
       </file>
     </package>
     <package name="slices">
-      <metrics statements="506" coveredstatements="417" conditionals="27" coveredconditionals="27" methods="17" coveredmethods="11"/>
+      <metrics statements="506" coveredstatements="423" conditionals="30" coveredconditionals="30" methods="17" coveredmethods="11"/>
       <file name="burgerConstructorSlice.ts" path="/Users/kseniaivancenko/Desktop/Dev/practicum/react/stellar-burgers/src/slices/burgerConstructorSlice.ts">
         <metrics statements="83" coveredstatements="80" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
@@ -310,7 +310,7 @@
         <line num="70" count="1" type="stmt"/>
       </file>
       <file name="userOrdersSlice.ts" path="/Users/kseniaivancenko/Desktop/Dev/practicum/react/stellar-burgers/src/slices/userOrdersSlice.ts">
-        <metrics statements="47" coveredstatements="41" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <metrics statements="47" coveredstatements="47" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -341,18 +341,18 @@
         <line num="28" count="1" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="36" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
+        <line num="40" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
         <line num="45" count="1" type="stmt"/>
