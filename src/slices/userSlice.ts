@@ -16,12 +16,6 @@ import { deleteCookie, getCookie, setCookie } from '../utils/cookie';
 
 export const loginUser = createAsyncThunk(
   'user/loginUser',
-  // async ({ email, password }: TLoginData) => {
-  //   const res = await loginUserApi({ email, password });
-  //   setCookie('accessToken', res.accessToken);
-  //   localStorage.setItem('refreshToken', res.refreshToken);
-  //   return res;
-  // }
   async ({ email, password }: Omit<TRegisterData, 'name'>) => {
     const data = await loginUserApi({ email, password });
     setCookie('accessToken', data.accessToken);
@@ -98,7 +92,7 @@ type TUserState = {
   error?: string | null;
 };
 
-const initialState: TUserState = {
+export const initialState: TUserState = {
   isAuthChecked: false,
   loading: false,
   user: null,
