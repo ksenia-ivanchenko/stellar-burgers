@@ -13,7 +13,7 @@ type TFeedState = {
   error?: string | null;
 };
 
-const initialState: TFeedState = {
+export const initialState: TFeedState = {
   feedData: {
     orders: [],
     total: 0,

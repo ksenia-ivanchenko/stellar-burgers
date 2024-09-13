@@ -33,7 +33,7 @@ const mockIngredients = [
   }
 ];
 
-describe('getIngredients async thunk', () => {
+describe('getIngredients extra reducer', () => {
   test('should switch loading while getIngredients.pending', () => {
     const action = { type: getIngredients.pending.type };
     const state = ingredientsReducer(initialState, action);
