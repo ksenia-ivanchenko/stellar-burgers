@@ -11,6 +11,7 @@ export const OrderInfo: FC = () => {
   const { ingredients } = useSelector((state) => state.ingredients);
   const orderData = useSelector((state) => state.order.orderModalData);
   const number = Number(useParams().number);
+  console.log(number);
 
   useEffect(() => {
     dispatch(getOrder(number));
