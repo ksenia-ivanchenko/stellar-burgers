@@ -1,4 +1,4 @@
-import { getFeedsApi, orderBurgerApi } from '@api';
+import { getFeedsApi, orderBurgerApi } from '../utils/burger-api';
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { TOrder, TOrdersData } from '@utils-types';
 
@@ -13,7 +13,7 @@ type TFeedState = {
   error?: string | null;
 };
 
-const initialState: TFeedState = {
+export const initialState: TFeedState = {
   feedData: {
     orders: [],
     total: 0,

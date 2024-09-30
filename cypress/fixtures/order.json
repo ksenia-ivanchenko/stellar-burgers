@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "order": {
+    "_id": "66e4ffd7119d45001b506d6b",
+    "ingredients": [
+      "643d69a5c3f7b9001cfa093d",
+      "643d69a5c3f7b9001cfa0940",
+      "643d69a5c3f7b9001cfa0943",
+      "643d69a5c3f7b9001cfa093d"
+    ],
+    "owner": "66b83e8a119d45001b4ff091",
+    "status": "done",
+    "name": "Space флюоресцентный метеоритный бургер",
+    "createdAt": "2024-09-14T03:15:35.581Z",
+    "updatedAt": "2024-09-14T03:15:36.210Z",
+    "number": 52971,
+    "__v": 0
+  }
+}
